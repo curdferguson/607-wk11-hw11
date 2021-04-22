@@ -1,0 +1,67 @@
+---
+title: "607-wk11-hw11"
+author: "Tyler Frankenberg"
+date: "4/20/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Kroger.com
+
+Kroger.com (<https://www.kroger.com/>) is the eCommerce home for the nation's largest grocery retailer, The Kroger Co.
+
+Kroger.com's target users are online grocery shoppers, as well as shoppers of its brick-and-mortar retail supermarkets across the country.
+
+Their key goals are to select from a wide variety of grocery products, either to reference for in-store shopping; order for curbside pickup; or order for home delivery (either for local courier delivery or long-distance shipment).
+
+## Site and Recommender Systems
+
+The site attempts to help them accomplish this goal by providing its extensive catalog of grocery items for online browsing, merchandised in a simple menu of categories that match a traditional supermarket layout (deli, prepared foods, produce, pharmacy, etc):
+
+![](C:/Users/tsfra/AppData/Local/RStudio/tmp/paste-3E7A18D1.png)
+
+Page results display in a clean interface with a simple set of filters on the left side that subset items according to four variables - "Ways to Shop," "Departments," "Brands," and "Nutrition."
+
+![](C:/Users/tsfra/AppData/Local/RStudio/tmp/paste-BB92980A.png)
+
+Once signed in, the customer is presented with 3 distinct recommender systems.
+
+1.   "Start Your Cart" recommends common staples like bread, milk, bananas, and eggs. While it is introduced by a "Buy Again" button, it displays results even if a customer has never ordered, indicating that collaborative filtering is likely being employed to provide recommendations based on other shoppers' choices.
+
+![](C:/Users/tsfra/AppData/Local/RStudio/tmp/paste-F5D246B7.png)
+
+Clicking on an item - in this case, "Halo Seedless California Mandarins", the customer will be presented with two additional reccommender systems:
+
+2.  "Similar Items" appears to rely on content filtering to provide recommendations of items that share the same attributes...\
+
+    ![](C:/Users/tsfra/AppData/Local/RStudio/tmp/paste-CDEFA73E.png)
+
+3.  "You Might Also Like..." is a collaborative filtering algorithm developed by Kroger's subsidiary data science consultancy, 84.51\*. The "New Product Recommender" and "Complements" algorithms use Lasso Regression and collaborative filtering machine learning techniques to recommend items that go well together or that similar users have purchased:
+
+![](C:/Users/tsfra/AppData/Local/RStudio/tmp/paste-3BFA25C0.png)
+
+## Recommendations
+
+1.  The site's four-variable filtering through its menu of departments, shipping methods, brands, and nutrition does not support sophisticated knowledge-based filtering for customers who have specific dietary, ethical, regional, or theme-driven browsing.  Additional categories could support more knolwedge-based browsing on the part of interested customers.
+
+2. While the site's "Start Your Cart" recommender system is prominent immediately upon login, its product-specific recommenders are buried at the bottom of Product Detail Pages below lengthy ingredient lists and nutrition facts.  The recommenders  would benefit from being placed more prominently on the PDP to invite faster browsing and more data from customers' clicking through recommended pages.
+
+
+### Sources
+
+Kroger.com. The Kroger Co. Accessed 19 April 2021 at <https://www.kroger.com>.
+
+Borodescu, Ciprian. "The AI of Personalized Ecommerce Product Recommendations." Morphl.  14 April 2020.  Accessed 19 April 2021 from <https://morphl.io/blog/ecommerce-ai-recommender-system/>
+
+84.51*.  "Personalization Sciences Enhances Shopper Experience on Kroger.com."  Accessed 20 April 2021 from <https://www.8451.com/forward-thinking/personalization-sciences>.
+
+84.51* "New Product Recommender" <
+
+84.51* "Complements"
+
+
+
+
